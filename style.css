@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Sriracha&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 380px) {
+    
+    body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    header {
+        background-color:  #343434ef;
+        width: 100vw;
+        height: 80px;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    header nav svg {
+        display: flex;
+        width: 50px;
+        transform: translate(5px, 24px);
+    }
+
+    header nav ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: end;
+        gap: 13px;
+        margin-right: 8px;
+    }
+
+    header nav ul a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .imagemheader {
+        width: 100vw;
+    }
+
+    .imagemheader img {
+        position: relative;
+        width: 100vw;
+    }
+
+    h1 {
+        position: absolute;
+        top: 5rem;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: 400;
+        margin-left: 15px;
+        font-size: 20px;
+    }
+
+    h2 {
+        position: absolute;
+        top: 8.5rem;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: 300;
+        margin-left: 15px;
+        font-size: 17px;
+    }
+
+    .communication {
+        display: flex;
+        border-radius: 2rem;
+        position: absolute;
+        top: 11.5rem;
+        width: 100px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 15px;
+        background-color: white;
+        
+    }
+
+    .communication a {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #343434;
+        text-decoration: none;
+    }
+
+    .h3 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        margin: 15px 0px 0px 15px;
+        font-weight: 600;
+    }
+ 
+
+    .direitocivil {
+        display: flex;
+        margin: 15px 0px 50px 15px;
+        width: 350px;
+        height: 230px;
+    }
+
+    .imagemdireitocivil img {
+        width: 150px;
+        height: 250px;
+    }
+
+    .h4 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        margin: 0px 0px 0px 10px;
+        font-weight: 400;
+    }
+
+    .p1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0px 1px 0px 10px;
+    }
+
+    .direitocivil a {
+        display: flex;
+        margin-top: 5px;
+        text-decoration: none;
+        color: #343434;
+        font-weight: 700;
+    }
+
+    .direitopenal {
+        display: flex;
+        margin: 15px 0px 50px 15px;
+        width: 350px;
+        height: 230px;
+    }
+
+    .imagemdireitopenal img {
+        width: 150px;
+        height: 250px;
+    }
+
+    .h5 {
+        display: flex;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        margin: 0px 10px 0px 0px;
+        font-weight: 400;
+        justify-self: end;
+
+    }
+
+    .p2 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .direitopenal a {
+        display: flex;
+        justify-self: end;
+        margin-top: 5px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #343434;
+        font-weight: 700;
+    }
+
+    .direitotrabalhista {
+        display: flex;
+        margin: 15px 0px 80px 15px;
+        width: 350px;
+        height: 230px;
+    }
+
+    .imagemdireitotrabalhista img {
+        width: 150px;
+        height: 270px;
+    }
+
+    .h6 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        margin: 0px 0px 0px 10px;
+        font-weight: 400;
+    }
+
+    .p3 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0px 1px 0px 10px;
+    }
+
+    .direitotrabalhista a {
+        display: flex;
+        margin-top: 5px;
+        text-decoration: none;
+        color: #343434;
+        font-weight: 700;
+    }
+
+    .depoimentos-area {
+        background-color: #343434;
+        height: 650px;
+    }
+
+    .h7 {
+        display: flex;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        margin: 0px 0px 50px 0px;
+        font-weight: 400;
+        color: white;
+        justify-content: center;
+        transform: translate(0, 1.5rem);
+    }
+
+    #boxes {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .box1 {
+        background-color: #9A9B9B;
+        width: 150px;
+        height: 250px;
+    }
+
+    .clientefoto {
+        width: 150px;
+        height: 120px;
+    }
+
+    .clientefoto img {
+        width: 150px;
+        height: 130px;
+    }
+
+    .box2 {
+        background-color:  #9A9B9B;
+        width: 150px;
+        height: 250px;
+    }
+
+    .box3 {
+        background-color: #9A9B9B;
+        width: 150px;
+        height: 250px;
+    }
+
+    .box4 {
+        background-color:  #9A9B9B;
+        width: 150px;
+        height: 250px;
+    } 
+
+    .box4 a {
+        text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .avaliacao {
+        
+    }
+
+    .data {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: white;
+        margin: 10px 0px 0px 5px;
+        font-size: 10px;
+    }
+
+    
+
+
+}

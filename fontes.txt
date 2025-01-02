@@ -1,0 +1,4 @@
+cinza claro #9A9B9B
+cinza claro escuro #787878
+cinza #585858
+cinza escuro #343434
