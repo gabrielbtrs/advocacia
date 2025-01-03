@@ -9,11 +9,17 @@
 <body>
     <header>
         <nav>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.9985 2L12.9979 3.278L17.9985 4.94591L21.631 3.73509L22.2634 5.63246L19.2319 6.643L22.3272 15.1549C21.2353 16.2921 19.6996 17 17.9985 17C16.2975 17 14.7618 16.2921 13.6699 15.1549L16.7639 6.643L12.9979 5.387V19H16.9985V21H6.99854V19H10.9979V5.387L7.23192 6.643L10.3272 15.1549C9.23528 16.2921 7.69957 17 5.99854 17C4.2975 17 2.76179 16.2921 1.66992 15.1549L4.76392 6.643L1.73363 5.63246L2.36608 3.73509L5.99854 4.94591L10.9979 3.278L10.9985 2H12.9985ZM17.9985 9.10267L16.5809 13H19.4159L17.9985 9.10267ZM5.99854 9.10267L4.58092 13H7.41592L5.99854 9.10267Z"></path></svg>
-            <ul>
-                <li><a href="#">Depoimentos</a></li>
-                <li><a href="#">Consulta</a></li>
-                <li><a href="#">Contato</a></li>
+            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.9985 2L12.9979 3.278L17.9985 4.94591L21.631 3.73509L22.2634 5.63246L19.2319 6.643L22.3272 15.1549C21.2353 16.2921 19.6996 17 17.9985 17C16.2975 17 14.7618 16.2921 13.6699 15.1549L16.7639 6.643L12.9979 5.387V19H16.9985V21H6.99854V19H10.9979V5.387L7.23192 6.643L10.3272 15.1549C9.23528 16.2921 7.69957 17 5.99854 17C4.2975 17 2.76179 16.2921 1.66992 15.1549L4.76392 6.643L1.73363 5.63246L2.36608 3.73509L5.99854 4.94591L10.9979 3.278L10.9985 2H12.9985ZM17.9985 9.10267L16.5809 13H19.4159L17.9985 9.10267ZM5.99854 9.10267L4.58092 13H7.41592L5.99854 9.10267Z"></path></svg></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/">Contato</a></li>
+                <li><a href="/">Áreas</a></li>
+                <li><a href="/">Equipe</a></li>
             </ul>
         </nav>
     </header>
@@ -21,17 +27,18 @@
         <div class="imagemheader">
             <img src="imgs/pexels-zachary-caraway-646894910-17630959.jpg" alt="foto header">
 
-            <h1>Soluções Jurídicas Personalizadas para Você</h1>
-            <h2>Especialistas em Direito Civil, Penal e Trabalhista</h2>
-
-            <div class="communication"><a href="#"><p>Fale conosco</p></a>
-                
+            <div class="infoheader">
+                <h1>Soluções Jurídicas Personalizadas para Você</h1>
+                <h2>Especialistas em Direito Civil, Penal e Trabalhista</h2>
+                <div class="communication">
+                    <a href="#"><p>Fale conosco</p></a>
+                </div>
             </div>
         </div>
 
         <h3 class="h3">Principais Áreas de Atuação</h3>
 
-        <section>
+        <section id="direitos">
             <div class="direitocivil">
                 <div class="imagemdireitocivil">
                     <img src="imgs/pexels-mikhail-nilov-8730998.jpg" alt="Direito Civil Imagem">
@@ -49,12 +56,12 @@
                     <p class="p1"><a href="#">Saiba mais</a></p>
                 </div>
                 <div class="imagemdireitopenal">
-                   <img src="imgs/pexels-kindelmedia-7715107.jpg" alt="foto direito penal">
-                </div>
+                    <img src="imgs/pexels-kindelmedia-7715107.jpg" alt="foto direito penal">
+                 </div>
             </div>
             <div class="direitotrabalhista">
                 <div class="imagemdireitotrabalhista">
-                    <img src="imgs/pexels-rdne-7841478.jpg" alt="Direito Civil Imagem">
+                    <img src="imgs/pexels-rdne-7841478.jpg" alt="Direito Trabalhista Imagem">
                 </div>
                 <div class="direitotrabalhistadesc">
                     <h3 class="h6">Direito Trabalhista</h3>
@@ -66,29 +73,34 @@
         </section>
 
         <div class="depoimentos-area">
-
             <h3 class="h7">Principais Depoimentos</h3>
             <section id="boxes">
                 <div class="box1">
-                    <div class="clientefoto">
-                        <img src="imgs/pexels-dziana-hasanbekava-7196342.jpg" alt="cliente 1">
-                    </div>
-                    <p class="data">01 de Novembro</p>
-                    <p class="avaliacao">A equipe de Civl demonstra amplo domínio sobre contratos, sucessões e disputas patrimoniais, oferecendo soluções práticas e personalizadas para garantir a proteção dos interesses dos clientes.</p>
+                    <a href="#">
+                        <div class="clientefoto"> 
+                            <img src="imgs/pexels-dziana-hasanbekava-7196342.jpg" alt="cliente 1">
+                        </div>
+                        <p class="data">01 de Novembro</p>
+                        <p class="avaliacao">"A equipe de Civl demonstra amplo domínio sobre contratos, sucessões e disputas patrimoniais, oferecendo soluções práticas e personalizadas para garantir a proteção dos interesses dos clientes."</p>
+                    </a>
                 </div>
                 <div class="box2">
-                    <div class="clientefoto">
-                        <img src="imgs/pexels-pnw-prod-8276723.jpg" alt="cliente 2">
-                    </div>
-                    <p class="data">01 de Janeiro</p>
-                    <p class="avaliacao">Altamente capacitada em defesa criminal e estratégias jurídicas, a equipe atua com ética e determinação, assegurando o pleno exercício dos direitos dos assistidos.</p>
+                    <a href="#">
+                        <div class="clientefoto">
+                            <img src="imgs/pexels-pnw-prod-8276723.jpg" alt="cliente 2">
+                        </div>
+                        <p class="data">01 de Janeiro</p>
+                        <p class="avaliacao">"Altamente capacitada em defesa criminal e estratégias jurídicas, a equipe atua com ética e determinação, assegurando o pleno exercício dos direitos dos assistidos."</p>
+                    </a>
                 </div>
                 <div class="box3">
-                    <div class="clientefoto">
-                        <img src="imgs/pexels-rdne-5922395.jpg" alt="cliente 3">
-                    </div>
-                    <p class="data">19 de Outubro</p>
-                    <p class="avaliacao">A equipe possui expertise na resolução de conflitos trabalhistas, promovendo acordos eficazes e assegurando o cumprimento das normas que protegem funcionários e empregados.</p>
+                    <a href="#">
+                        <div class="clientefoto">
+                            <img src="imgs/pexels-rdne-5922395.jpg" alt="cliente 3">
+                        </div>
+                        <p class="data">19 de Outubro</p>
+                        <p class="avaliacao">"A equipe possui expertise na resolução de conflitos trabalhistas, promovendo acordos eficazes e assegurando o cumprimento das normas que protegem funcionários e empregados."</p>
+                    </a> 
                 </div>
                 <div class="box4">
                     <a href="#">
@@ -96,15 +108,146 @@
                             <img src="imgs/pexels-wolfart-15674443.jpg" alt="cliente 4">
                         </div>
                         <p class="data">06 de Abril</p>
-                        <p class="avaliacao">Com profundo conhecimento das relações trabalhistas, a equipe oferece soluções eficientes tanto para empresas quanto para trabalhadores, atuando na prevenção de litígios e garantindo a conformidade com as legislações vigentes.</p>
+                        <p class="avaliacao">"Com profundo conhecimento das relações trabalhistas, a equipe oferece soluções eficientes tanto para empresas quanto para trabalhadores, atuando na prevenção de litígios e garantindo a conformidade com as legislações vigentes."</p>
                     </a>
                 </div>
             </section>
-            
-        </div>
+        </div>    
+            <section id="valores">
+                <div class="box5">
+                    <div class="box6">
+                        <img src="imgs/pexels-pavel-danilyuk-8112152.jpg" alt="foto valores">
+                    </div>
+                    <div class="box7">
+                        <h3 class="h8">Valores</h3>
+                        <p class="p-valores">
+                            Os valores dos nossos serviços são ajustáveis e dependem das características específicas de cada área jurídica e das necessidades apresentadas. Essa flexibilidade nos permite oferecer soluções personalizadas e adequadas para cada cliente.
+                            Para obter uma estimativa detalhada ou esclarecer dúvidas, recomendamos que entre em contato com nossa equipe responsável. Estamos prontos para analisar seu caso e fornecer as informações necessárias com transparência e profissionalismo.
+                        </p>
+                        <p class="p4"><a href="#">Saiba Mais</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="box8">
+                <h3 class="h9">Mini Jornal</h3>
+                <section id="mini-jornal">
+
+                    
+                    <div class="box9">
+                        <a href="#">
+                            <div class="imagemjornal">
+                                <img src="imgs/pexels-shkrabaanthony-5816283.jpg" alt="foto 1">
+                            </div>
+                            <p class="datajornal">02/01/2025</p>
+                            <h3 class="titulonoticia">Nova Lei de Proteção de Dados Entra em Vigor</h3>
+                            <p class="descnoticia">A legislação atualizada reforça os direitos dos cidadãos sobre seus dados pessoais e impõe regras mais rígidas para empresas.</p>
+                        </a>    
+                    </div>
+                    <div class="box10">
+                        <a href="#">
+                            <div class="imagemjornal">
+                                <img src="imgs/pexels-olly-3760067.jpg" alt="foto 2">
+                            </div>
+                            <p class="datajornal">30/12/2024</p>
+                            <h3 class="titulonoticia">Supremo Tribunal Decide Caso Histórico de Direito Penal</h3>
+                            <p class="descnoticia">Em decisão inédita, o STF define novos parâmetros para julgamentos relacionados a crimes cibernéticos.</p>
+                        </a>    
+                    </div>
+                    <div class="box11">
+                        <a href="#">
+                            <div class="imagemjornal">
+                                <img src="imgs/pexels-matthiaszomer-618158.jpg" alt="foto 3">
+                            </div>
+                            <p class="datajornal"> 28/12/2024</p>
+                            <h3 class="titulonoticia">Reforma Tributária Avança no Congresso Nacional</h3>
+                            <p class="descnoticia">O projeto propõe simplificação de impostos e promete impacto positivo para empresas e cidadãos.</p>
+                        </a>    
+                    </div>
+                    <div class="box12">
+                        <a href="#">
+                            <div class="imagemjornal">
+                                <img src="imgs/pexels-ekaterina-bolovtsova-6077797.jpg" alt="foto 4">
+                            </div>
+                            <p class="datajornal"> 27/12/2024</p>
+                            <h3 class="titulonoticia">Aumento nos Casos de Litígios Trabalhistas Pós-Pandemia</h3>
+                            <p class="descnoticia">Especialistas apontam o crescimento de processos trabalhistas, especialmente envolvendo trabalho remoto.</p>
+                        </a>    
+                    </div>
+                    <div class="box13">
+                        <a href="#">
+                            <div class="imagemjornal">
+                               <img src="imgs/pexels-ekaterina-bolovtsova-6077447.jpg" alt="foto 5">
+                            </div>
+                            <p class="datajornal">26/12/2024</p>
+                            <h3 class="titulonoticia">Nova Tendência: Mediação e Arbitragem em Alta no Brasil</h3>
+                            <p class="descnoticia">Métodos alternativos de resolução de conflitos ganham espaço, garantindo mais agilidade nos processos jurídicos.</p>
+                        </a>    
+                    </div>
+                    <div class="box14">
+                        <a href="#">
+                            <div class="imagemjornal">
+                                <img src="imgs/pexels-cottonbro-6814521.jpg" alt="foto 6">
+                            </div>
+                            <p class="datajornal">25/12/2024</p>
+                            <h3 class="titulonoticia">Brasil Assume Compromisso em Acordo Internacional de Comércio</h3>
+                            <p class="descnoticia"> O país firma tratado para facilitar exportações e proteger direitos de propriedade intelectual.</p>
+                        </a>    
+                    </div>
+                </section>
+            </div>
     </main>
     <footer>
+        <div class="box15">
+            <div class="box16">
+                <a href="#">
+                    <ul>
+                        <li>Sobre nós</li>
+                        <span><li>Equipe</li></span>
+                        <li>Contato e Localização</li>
+                        <span><li>Aviso Legal</li></span>
+                        <li>Política de Privacidade</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="box17">
+                <form action="/" method="post">
 
+                    <div class="camposlogin">
+                        <label for=".nomedeusuario">Nome Completo:</label>
+                        <input type="text" name="username" class="nomedeusuario" required minlength="10">
+
+                        <label for=".email">Seu Email:</label>
+                        <input type="email" name="email" class="email" required >
+
+                        <label for=".problema">Qual equipe Deseja?</label>
+                        <select name="equipes" id="equipes" required>
+                            <option value="" disabled selected>Selecione uma Opção</option>
+                            <option value="Direito Civil">Direito Civil</option>
+                            <option value="Direito Penal">Direito Penal</option>
+                            <option value="Direito Trabalhista">Direito Trabalhista</option>
+                            <option value="Direito Empresarial">Direito Empresarial</option>
+                            <option value="Direito Tributário">Direito Tributário</option>
+                            <option value="Direito Internacional">Direito Internaciona</option>
+                            <option value="Direito Administrativo">Direito Administrativo</option>
+                        </select>
+                    </div>
+
+                    <div class="enviar-reset">
+                        <input type="submit" id="submit">
+                        <input type="reset" id="reset" value="Limpar">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="credits-license">
+            <p class="license">&copy; 2025 Agência de Advocacia King. Todos os direitos reservados.</p>
+            <p class="license2">Este site e seu conteúdo são protegidos pelas leis de direitos autorais. É proibida a reprodução total ou parcial sem autorização prévia.</p>
+            <p class="dev">Desenvolvido Por <a href="https://github.com/gabrielbtrs">Gabriel Torres</a></p>
+            
+        </div>
     </footer>
+    <script src="mobile.js"></script>
 </body>
 </html>
