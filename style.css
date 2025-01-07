@@ -6,12 +6,519 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 380px) {
+@media (min-width: 0) and (max-width: 444px) {
     
     body {
         display: flex;
         height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    header {
+        background-color: #343434ef;
         width: 100vw;
+        height: 8vh;
+        position: fixed;
+    }
+
+    .img-header img {
+        width: 100vw;
+    }
+
+    .mobile-menu {
+        cursor: pointer;
+        display: block;
+
+    }
+
+    .mobile-menu div {
+        width: 32px;
+        height: 2px;
+        background: #fff;
+        margin: 7px;
+        transition: 0.3s;
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px 0px 10px;
+        align-items: center;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        z-index: 1000;
+    }
+
+    .nav-list {
+        position: absolute;
+        right: 0;
+        top: 5.5vh;
+        list-style: none;
+        display: flex;
+        width: 50vw;
+        height: 93vh;
+        background-color: #343434ef;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 1000;
+
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .nav-list li {
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+    }
+
+    header nav svg {
+        display: flex;
+        width: 45px;
+        align-self: center;
+        
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    header a:hover {
+        opacity: 0.7;
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45.5deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+    .mobile-menu.active .line3 {
+        transform: rotate(45.5deg) translate(-5px, -7px);
+    }
+
+    .img-header img {
+        width: 100vw;
+    }
+
+    /* responsavidade, se mudar a ordem da imagem do mobile, muda de todas. Por isso foi criado três sections, daí dá pra mexer em cada uma sem risco de deixar algo errado */
+
+    #telas-maiores {
+        display: none;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #desktop-h1 {
+        display: none;
+    }
+
+    #telas-maiores-h1 {
+        display: none;
+    }
+
+    #desktop-h1 {
+        display: none;
+    }
+
+    #mobile-h1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin: 10px 0px 10px 10px;
+        color: #343434;
+    }
+
+    .direitocivil {
+        display: flex;
+        margin: 0.5rem 0 0 0.5rem;
+    }
+
+    .direitocivil a {
+        text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #343434;
+    }
+
+    .direitocivil img {
+        width: 150px;
+        height: 280px;
+    }
+
+    .infodesc {
+        flex-direction: column;
+        margin-left: 0.5rem;
+    }
+
+    #saibamais a {
+        display: none;
+    }
+
+    #saibamais-penal a {
+        display: none;
+    }
+
+    .direitopenal {
+        display: flex;
+        margin: 1rem 0.5rem 1rem 0;
+    }
+
+    .direitopenal a {
+        text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #343434;
+        text-align: end;
+    }
+
+    .direitopenal img {
+        width: 150px;
+        height: 280px;
+        margin-left: 0.5rem;
+    }
+
+
+    .direitotrabalhista {
+        display: flex;
+        margin: 0.5rem 0 0 0.5rem;
+    }
+
+    .direitotrabalhista a {
+        text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #343434;
+    }
+
+    .direitotrabalhista img {
+        width: 150px;
+        height: 280px;
+    }
+
+    #deps {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
+    }
+
+    .depoimentosarea {
+        height: auto;
+        background-color: #343434;
+        margin: 2rem 0 2rem 0;
+        padding-bottom: 2rem;
+    }
+
+    .depoimentos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .dep1 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    #data {
+        font-size: 10px;
+    }
+
+    #data, #area, #av-direito-civil, #av-direito-penal, #av-direito-trabalhista, #av-direito-tributario {
+        margin-left: 5px;
+    }
+
+    .dep1 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep2 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep2 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep3 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep3 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep4 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep4 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .box-valores {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 300px;
+        height: 730px;
+        background-color: #343434;
+    }
+
+    #valores-h1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(170, 170, 170);
+        font-weight: 300;
+    }
+
+    #valores-p {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    .box2 img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .box3 {
+        text-align: center;
+    }
+
+    #saibamais-box3 a {
+        color: #fff;
+        transform: translate(0, 1.5rem);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .h1-jornal {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        font-size: 20px;
+        background-color: #343434;
+    }
+
+    .jornal {
+        height: auto;
+        background-color: #343434;
+        padding-top: 1rem;
+        padding-bottom: 2rem; 
+    }
+
+    #mini-jornal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .noticias a {
+        display: flex;
+        text-decoration: none;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 330px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .noticias img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .data-noticias {
+        font-size: 10px;
+        margin-left: 5px;
+    }
+
+    .h1-noticias {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .desc-noticias {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .box15 {
+        width: 100vw;
+        height: auto;
+        background-color: #343434ef;
+        display: flex;
+    }
+
+    .box16 {
+        display: flex;
+        width: 150px;
+        flex-direction: column;
+        justify-content: center;
+        height: 13rem;
+        background-color: #343434 ;
+        
+    }
+
+    .box16 span {
+        line-height: 3;
+    }
+
+    .box16 a {  
+        text-decoration: none;  
+        color: white;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .box17 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+       
+    label {
+        display: block;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        color: white;
+    }
+
+    input {
+        display: flex;
+        width: 200px;
+        align-self: center;
+    }
+
+    select {
+        width: 200px;
+    }
+
+    options {
+        color: black;
+    }
+
+    .enviar-reset {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 35px;
+    }
+
+    #submit {
+        width: 50px;
+    }
+        
+    #reset {
+        width: 50px;
+    }
+
+    .credits-license {
+        width: 100vw;
+        height: 3rem;
+        background-color: #1a1a1ab6;
+    }
+
+    .license, .license2, .dev {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .dev {
+        background-color:#9A9B9B;
+    }
+
+    .dev a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media (min-width: 445px) and (max-width: 703px) {
+
+    body {
+        display: flex;
+        height: 100vh;
+        width: 100%;
         flex-direction: column;
         overflow-x: hidden;
     }
@@ -110,400 +617,317 @@
         transform: rotate(45.5deg) translate(-5px, -7px);
     }
 
-    .imagemheader img {
-        position: relative;
+   .img-header img {
         width: 100vw;
     }
 
-    h1 {
-        position: absolute;
-        top: 5rem;
+    main {
+        height: auto;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #desktop-h1 {
+        display: none;
+    }
+
+    #mobile-h1 {
+        display: none;
+    }
+
+    #telas-maiores-h1 {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 400;
-        margin-left: 15px;
         font-size: 20px;
-    }
-
-    h2 {
-        position: absolute;
-        top: 8.5rem;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-        margin-left: 15px;
-        font-size: 17px;
-    }
-
-    .communication {
-        display: flex;
-        border-radius: 2rem;
-        position: absolute;
-        top: 11.5rem;
-        width: 100px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 15px;
-        background-color: white;
-        
-    }
-
-    .communication a {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 13px;
         color: #343434;
-        text-decoration: none;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    .h3 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 15px 0px 0px 15px;
-        font-weight: 600;
+    #telas-maiores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
- 
 
     .direitocivil {
         display: flex;
-        margin: 15px 0px 50px 15px;
-        width: 350px;
-        height: 230px;
+        width: 170px;
+        text-align: center;
+        flex-direction: column;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitocivil img {
-        width: 150px;
-        height: 250px;
+    .direitocivil img {
+        width: 170px;
+        height: 280px;
     }
 
-    .h4 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
+    .saibamais {
+        margin-top: 7px;
     }
 
-    .p1 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
+    #saibamais-penal {
+        margin-top: 8px
     }
 
-    .direitocivil a {
-        display: flex;
-        margin-top: 5px;
+    .direitocivil {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .infodesc {
+        flex-direction: column;
+        margin-left: 0.5rem;
     }
 
     .direitopenal {
         display: flex;
-        position: relative;
-        left: 25px;
-        margin: 15px 0px 70px 15px;
-        width: 330px;
-        height: 210px;
+        flex-direction: column;
+        width: 170px;
+        text-align: center;
+        margin: 0.5rem 0.5rem 0 0.5rem;
     }
 
-    .imagemdireitopenal img {
-        width: 150px;
-        height: 250px;
-        margin: 0px 15px 0px 0px;
-    }
-
-    .h5 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 10px 0px 0px;
-        font-weight: 400;
-        justify-self: end;
-
-    }
-
-    .p2 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .direitopenal a {
-        display: flex;
-        justify-self: end;
-        transform: translate(-0.3rem, -1.1rem);
-        margin-right: 10px;
+    .direitopenal {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .direitopenal img {
+        width: 170px;;
+        height: 280px;
     }
 
     .direitotrabalhista {
         display: flex;
-        margin: 15px 0px 80px 15px;
-        width: 350px;
-        height: 230px;
+        flex-direction: column;
+        width: 170px;
+        text-align: center;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitotrabalhista img {
-        width: 150px;
-        height: 270px;
-    }
-
-    .h6 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
-    }
-
-    .p3 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
-    }
-
-    .direitotrabalhista a {
-        display: flex;
-        margin-top: 5px;
-        text-decoration: none;
-        color: #343434;
-        font-weight: 700;
-    }
-
-    .depoimentos-area {
-        background-color: #343434;
-        height: 650px;
-        
-    }
-
-    .h7 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 50px 0px;
-        font-weight: 400;
-        color: white;
-        justify-content: center;
-        transform: translate(0, 1.5rem);
-    }
-
-    #boxes {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .box1 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .clientefoto {
-        width: 150px;
-        height: 120px;
-        
-    }
-
-    .clientefoto img {
-        width: 150px;
-        height: 130px;
-    }
-
-    .box2 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .box3 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-
-    }
-
-    .box4 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-        
-    } 
-
-    .box1 a, .box2 a, .box3 a, .box4 a {
+    .direitotrabalhista {
         text-decoration: none;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
         font-size: 14px;
-        color:  #000000;
+        color: #343434;
     }
 
-    .avaliacao {
-        transform: translate(5px, 0px);
+    .direitotrabalhista img {
+        width: 170px;
+        height: 280px;
     }
 
-    .data {
+    #deps {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        margin: 10px 0px 0px 5px;
-        font-size: 10px;
+        font-size: 20px;
+        color: #ffffff;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    #valores {
-        margin-top: 80px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .box5 {
-        width: 300px;
+    .depoimentosarea {
         height: auto;
+        padding-bottom: 2rem;
+        background-color: #343434;
+        margin: 2rem 0 2rem 0;
     }
 
-    .box6 {
-        width: 300px;
-        height: 200px;
+    .depoimentos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
     }
 
-    .box6 img {
-        width: 300px;
-        height: 201px;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    .box7 {
-        background-color: #130c07fb; 
-        width: 300px;
-        height: 350px;
+    .dep1 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
         overflow: scroll;
     }
 
-    .h8 {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-
+    #data {
+        font-size: 10px;
     }
 
-
-    .p-valores {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
+    #data, #area, #av-direito-civil, #av-direito-penal, #av-direito-trabalhista, #av-direito-tributario {
+        margin-left: 5px;
     }
 
-    .p4 {
-        position: relative;
-        top: 30px;
-        text-align: center;
+    .dep1 img {
+        height: 150px;
+        width: 150px;
     }
 
-    .p4 a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-    }
-
-    .box8 {
+    .dep2 {
         display: flex;
-        width: 100vw;
-        margin-top: 30px;
-        background-color: #787878;
-        height: 50rem;
-        padding-top: 20px;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
         flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep2 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep3 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep3 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep4 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep4 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .box-valores {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        width: 300px;
+        height: 730px;
+        background-color: #343434;
+    }
+
+    #valores-h1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(170, 170, 170);
+        font-weight: 300;
+    }
+
+    #valores-p {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    .box2 img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .box3 {
+        text-align: center;
+    }
+
+    #saibamais-box3 a {
+        color: #fff;
+        transform: translate(0, 1.5rem);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .h1-jornal {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        font-size: 20px;
+        background-color: #343434;
+    }
+
+    .jornal {
+        height: auto;
+        background-color: #343434;
+        padding-top: 1rem;
+        padding-bottom: 2rem; 
     }
 
     #mini-jornal {
         display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
     }
 
-    .box9 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box10 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box11 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box12 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box13 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box14 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .imagemjornal {
-        width: 130px;
-        height: 120px;
-    }
-
-    .imagemjornal img {
-        width: 130px;
-        height: 120px;
-    }
-
-    .h9 {
-        color: white;
+    .noticias a {
+        display: flex;
+        text-decoration: none;
+        gap: 3px;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    .box9 a, .box10 a, .box11 a, .box12 a, .box13 a, .box14 a {
-        text-decoration: none;  
         color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        flex-direction: column;
+        width: 150px;
+        height: 330px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .noticias img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .data-noticias {
         font-size: 10px;
-        
+        margin-left: 5px;
     }
 
-    .titulonoticia, .datajornal, .descnoticia {
-        transform: translate(3px, 0);
+    .h1-noticias {
+        font-size: 14px;
+        margin-left: 5px;
     }
 
+    .desc-noticias {
+        font-size: 12px;
+        margin-left: 5px;
+    }
 
     .box15 {
         width: 100vw;
@@ -590,516 +1014,386 @@
         font-size: 10px;
         text-align: center;
     }
+
+    .dev {
+        background-color:#9A9B9B;
+    }
+
+    .dev a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
-@media (min-width: 381px) and (max-width: 480px){
-    
+@media (min-width: 704px) and (max-width: 1024px) {
     body {
         display: flex;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         flex-direction: column;
-        overflow-x: hidden;
     }
 
     header {
         background-color: #343434ef;
         width: 100vw;
-        height: 8vh;
+        height: 7vh;
         position: fixed;
-        z-index: 1000;
-    }
-
-    .mobile-menu {
-        cursor: pointer;
-        display: block;
-    }
-
-    .mobile-menu div {
-        width: 32px;
-        height: 2px;
-        background: #fff;
-        margin: 8px;
-        transition: 0.3s;
-    }
-
-
-    nav {
         display: flex;
+    }
+
+    header nav {
+        display: flex;
+        width: 100vw;
         justify-content: space-between;
-        margin: 0px 10px 0px 10px;
         align-items: center;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
     }
 
     .nav-list {
-        position: absolute;
-        right: 0;
-        top: 8vh;
         list-style: none;
         display: flex;
-        width: 50vw;
-        height: 92vh;
-        background-color: #343434ef;
-        flex-direction: column;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-
-    }
-
-    .nav-list.active {
-        transform: translateX(0);
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
     }
 
     .nav-list li {
         display: flex;
-        justify-content: center;
-        opacity: 0;
+        padding: 1rem;
     }
 
     header nav svg {
         display: flex;
         width: 45px;
-        align-self: center;
-        
     }
 
     header a {
         color: white;
         text-decoration: none;
-        transition: 0.3s;
-    }
-
-    header a:hover {
-        opacity: 0.7;
     }
 
     .mobile-menu.active .line1 {
-        transform: rotate(-45.5deg) translate(-8px, 8px);
+       display: hidden;
     }
     .mobile-menu.active .line2 {
-        opacity: 0;
+        display: hidden;
     }
     .mobile-menu.active .line3 {
-        transform: rotate(45.5deg) translate(-5px, -7px);
+        display: hidden;
     }
 
-    .imagemheader img {
-        position: absolute;
+    .img-header img {
         width: 100vw;
     }
 
-    .infoheader {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        transform: translate(0, 100px);
+    main {
+        height: auto;
     }
 
-    h1 {
-        position: relative;
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #desktop-h1 {
+        display: none;
+    }
+
+    #mobile-h1 {
+        display: none;
+    }
+
+    #telas-maiores-h1 {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 400;
-        margin-left: 15px;
-        font-size: 20px;
-    }
-
-    h2 {
-        position: relative;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-        margin-left: 15px;
-        font-size: 17px;
-    }
-
-    .communication {
-        display: flex;
-        border-radius: 2rem;
-        position: relative;
-        width: 100px;
-        height: 30px;
-        justify-self: center;
-        align-self: center;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 15px;
-        background-color: white;
-        
-    }
-
-    .communication a {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 13px;
+        font-size: 27px;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
         color: #343434;
-        text-decoration: none;
     }
 
-    .h3 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 15px 0px 0px 15px;
-        font-weight: 600;
+    #telas-maiores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-    #direitos {
-        margin-top: 12rem;
-    }
- 
 
     .direitocivil {
         display: flex;
-        margin: 15px 0px 50px 15px;
-        width: 350px;
-        height: 230px;
+        width: 230px;
+        text-align: center;
+        flex-direction: column;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitocivil img {
-        width: 150px;
-        height: 250px;
+    .direitocivil img {
+        width: 230px;
+        height: 280px;
     }
 
-    .h4 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
+    .saibamais {
+        margin-top: 7px;
     }
 
-    .p1 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
+    #saibamais-penal {
+        margin-top: 8px
     }
 
-    .direitocivil a {
-        display: flex;
-        margin-top: 5px;
+    .direitocivil {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .infodesc {
+        flex-direction: column;
+        margin-left: 0.5rem;
     }
 
     .direitopenal {
         display: flex;
-        position: relative;
-        margin: 15px 0px 90px 15px;
-        left: 115px;
-        width: 330px;
-        height: 210px;
+        flex-direction: column;
+        width: 230px;
+        text-align: center;
+        margin: 0.5rem 0.5rem 0 0.5rem;
     }
 
-    .imagemdireitopenal img {
-        width: 150px;
-        height: 270px;
-        margin: 0px 0px 0px 5px;
-    }
-
-    .h5 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 10px 0px 0px;
-        font-weight: 400;
-        justify-self: end;
-
-    }
-
-    .p2 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .direitopenal a {
-        display: flex;
-        justify-self: end;
-        transform: translate(-0.3rem, -1.1rem);
-        margin-right: 10px;
+    .direitopenal {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .direitopenal img {
+        width: 230px;
+        height: 280px;
     }
 
     .direitotrabalhista {
         display: flex;
-        margin: 15px 0px 80px 15px;
-        width: 350px;
-        height: 230px;
+        flex-direction: column;
+        width: 230px;
+        text-align: center;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitotrabalhista img {
-        width: 150px;
-        height: 270px;
-    }
-
-    .h6 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
-    }
-
-    .p3 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
-    }
-
-    .direitotrabalhista a {
-        display: flex;
-        margin-top: 5px;
-        text-decoration: none;
-        color: #343434;
-        font-weight: 700;
-    }
-
-    .depoimentos-area {
-        background-color: #343434;
-        height: 650px;
-        
-    }
-
-    .h7 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 50px 0px;
-        font-weight: 400;
-        color: white;
-        justify-content: center;
-        transform: translate(0, 1.5rem);
-    }
-
-    #boxes {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .box1 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .clientefoto {
-        width: 150px;
-        height: 120px;
-        
-    }
-
-    .clientefoto img {
-        width: 150px;
-        height: 130px;
-    }
-
-    .box2 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .box3 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-
-    }
-
-    .box4 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-        
-    } 
-
-    .box1 a, .box2 a, .box3 a, .box4 a {
+    .direitotrabalhista {
         text-decoration: none;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
         font-size: 14px;
-        color:  #000000;
+        color: #343434;
     }
 
-    .avaliacao {
-        transform: translate(5px, 0px);
+    .direitotrabalhista img {
+        width: 230px;
+        height: 280px;
     }
 
-    .data {
+  
+    #deps {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        margin: 10px 0px 0px 5px;
-        font-size: 10px;
+        font-size: 20px;
+        color: #ffffff;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
     }
 
-    #valores {
-        margin-top: 80px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .box5 {
-        width: 300px;
+    .depoimentosarea {
         height: auto;
+        padding-bottom: 2rem;
+        background-color: #343434;
+        margin: 2rem 0 2rem 0;
     }
 
-    .box6 {
-        width: 300px;
-        height: 200px;
+    .depoimentos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
     }
 
-    .box6 img {
-        width: 300px;
-        height: 201px;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    .box7 {
-        background-color: #130c07fb; 
-        width: 300px;
-        height: 350px;
+    .dep1 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
         overflow: scroll;
     }
 
-    .h8 {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-
+    #data {
+        font-size: 10px;
     }
 
-
-    .p-valores {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
+    #data, #area, #av-direito-civil, #av-direito-penal, #av-direito-trabalhista, #av-direito-tributario {
+        margin-left: 5px;
     }
 
-    .p4 {
-        position: relative;
-        top: 30px;
-        text-align: center;
+    .dep1 img {
+        height: 150px;
+        width: 150px;
     }
 
-    .p4 a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-    }
-
-    .box8 {
+    .dep2 {
         display: flex;
-        width: 100vw;
-        margin-top: 30px;
-        background-color: #787878;
-        height: 35rem;
-        padding-top: 20px;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
         flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep2 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep3 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep3 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep4 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .dep4 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .box-valores {
+        display: flex;
+        justify-self: center;
+        width: 680px;
+        height: 345px;
+        background-color: #343434;
+    }
+
+    #valores-h1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(170, 170, 170);
+        font-weight: 300;
+    }
+
+    #valores-p {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    .box2 {
+        background-color: #343434;
+    }
+
+    .box2 img {
+        width: 330px;
+        height: 345px;
+    }
+
+    .box3 {
+        text-align: center;
+    }
+
+    #saibamais-box3 a {
+        color: #fff;
+        transform: translate(0, 1.5rem);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .h1-jornal {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        font-size: 20px;
+        background-color: #343434;
+    }
+
+    .jornal {
+        height: auto;
+        background-color: #343434;
+        padding-top: 1rem;
+        padding-bottom: 2rem; 
     }
 
     #mini-jornal {
         display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
     }
 
-    .box9 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box10 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box11 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box12 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box13 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box14 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .imagemjornal {
-        width: 130px;
-        height: 120px;
-    }
-
-    .imagemjornal img {
-        width: 130px;
-        height: 120px;
-    }
-
-    .h9 {
-        color: white;
+    .noticias a {
+        display: flex;
+        text-decoration: none;
+        gap: 3px;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    .box9 a, .box10 a, .box11 a, .box12 a, .box13 a, .box14 a {
-        text-decoration: none;  
         color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        flex-direction: column;
+        width: 150px;
+        height: 330px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .noticias img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .data-noticias {
         font-size: 10px;
-        
+        margin-left: 5px;
     }
 
-    .titulonoticia, .datajornal, .descnoticia {
-        transform: translate(3px, 0);
+    .h1-noticias {
+        font-size: 14px;
+        margin-left: 5px;
     }
 
+    .desc-noticias {
+        font-size: 12px;
+        margin-left: 5px;
+    }
 
     .box15 {
         width: 100vw;
@@ -1186,519 +1480,401 @@
         font-size: 10px;
         text-align: center;
     }
+
+    .dev {
+        background-color:#9A9B9B;
+    }
+
+    .dev a {
+        text-decoration: none;
+        color: white;
+    }
 }
 
-@media (min-width: 481px) and (max-width: 650px) {
-    
+@media (min-width: 1025px) {
+
     body {
         display: flex;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         flex-direction: column;
-        overflow-x: hidden;
     }
 
     header {
         background-color: #343434ef;
         width: 100vw;
-        height: 8vh;
+        height: 7vh;
         position: fixed;
-        z-index: 1000;
-    }
-
-    .mobile-menu {
-        cursor: pointer;
-        display: block;
-    }
-
-    .mobile-menu div {
-        width: 32px;
-        height: 2px;
-        background: #fff;
-        margin: 8px;
-        transition: 0.3s;
-    }
-
-
-    nav {
         display: flex;
+    }
+
+    header nav {
+        display: flex;
+        width: 100vw;
         justify-content: space-between;
-        margin: 0px 10px 0px 10px;
         align-items: center;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
     }
 
     .nav-list {
-        position: absolute;
-        right: 0;
-        top: 8vh;
         list-style: none;
         display: flex;
-        width: 50vw;
-        height: 92vh;
-        background-color: #343434ef;
-        flex-direction: column;
-        justify-content: space-around;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-
-    }
-
-    .nav-list.active {
-        transform: translateX(0);
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
     }
 
     .nav-list li {
         display: flex;
-        justify-content: center;
-        opacity: 0;
+        padding: 3rem;
     }
 
     header nav svg {
         display: flex;
         width: 45px;
-        align-self: center;
-        
+        margin-left: 2rem;
     }
 
     header a {
         color: white;
         text-decoration: none;
-        transition: 0.3s;
-    }
-
-    header a:hover {
-        opacity: 0.7;
     }
 
     .mobile-menu.active .line1 {
-        transform: rotate(-45.5deg) translate(-8px, 8px);
+       display: hidden;
     }
     .mobile-menu.active .line2 {
-        opacity: 0;
+        display: hidden;
     }
     .mobile-menu.active .line3 {
-        transform: rotate(45.5deg) translate(-5px, -7px);
+        display: hidden;
     }
 
-    .imagemheader img {
+    .img-header img {
         width: 100vw;
-        position: relative;
+        height: 90vh;
     }
 
-    .infoheader {
+    main {
+        height: auto;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
         display: flex;
-        flex-direction: column;
-        position: absolute;
-        transform: translate(4.3rem, -15rem);
-        
-        
-    }
-
-    h1 {
-        position: relative;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 400;
-        margin-left: 15px;
-        font-size: 20px;
-    }
-
-    h2 {
-        position: relative;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-        margin-left: 15px;
-        font-size: 17px;
-    }
-
-    .communication {
-        display: flex;
-        border-radius: 2rem;
-        position: relative;
-        width: 100px;
-        height: 30px;
-        justify-self: center;
-        align-self: center;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 15px;
-        background-color: white;
-        
+        gap: 205px;
     }
 
-    .communication a {
+    #desktop-h1 {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 13px;
+        font-size: 27px;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
         color: #343434;
-        text-decoration: none;
     }
 
-    .h3 {
+    #telas-maiores {
+        display: none;
+    }
+
+    #telas-maiores-h1 {
+        display: none;
+    }
+
+    #mobile-h1 {
+        display: none;
+    }
+
+    #telas-maiores-h1 {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 15px 0px 0px 15px;
-        font-weight: 600;
+        font-size: 27px;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
+        color: #343434;
     }
-
-    #direitos {
-        margin-top: 20rem;
-    }
- 
 
     .direitocivil {
         display: flex;
-        left: 0px;
-        margin: 200px 0px 60px 15px;
-        width: 350px;
-        height: 230px;
+        width: 230px;
+        text-align: center;
+        flex-direction: column;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitocivil img {
-        width: 150px;
-        height: 250px;
+    .direitocivil img {
+        width: 230px;
+        height: 280px;
     }
 
-    .h4 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
+    .saibamais {
+        margin-top: 7px;
     }
 
-    .p1 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
+    #saibamais-penal {
+        margin-top: 8px
     }
 
-    .direitocivil a {
-        display: flex;
-        margin-top: 5px;
+    .direitocivil {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .infodesc {
+        flex-direction: column;
+        margin-left: 0.5rem;
     }
 
     .direitopenal {
         display: flex;
-        position: relative;
-        margin: 15px 0px 100px 15px;
-        left: 145px;
-        width: 330px;
-        height: 210px;
+        flex-direction: column;
+        width: 230px;
+        text-align: center;
+        margin: 0.5rem 0.5rem 0 0.5rem;
     }
 
-    .imagemdireitopenal img {
-        width: 150px;
-        height: 270px;
-        margin: 0px 0px 0px 5px;
-    }
-
-    .h5 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 10px 0px 0px;
-        font-weight: 400;
-        justify-self: end;
-
-    }
-
-    .p2 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .direitopenal a {
-        display: flex;
-        justify-self: end;
-        transform: translate(-0.3rem, -1.1rem);
-        margin-right: 10px;
+    .direitopenal {
         text-decoration: none;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: #343434;
-        font-weight: 700;
+    }
+
+    .direitopenal img {
+        width: 230px;
+        height: 280px;
     }
 
     .direitotrabalhista {
         display: flex;
-        margin: 15px 0px 80px 15px;
-        width: 350px;
-        height: 230px;
+        flex-direction: column;
+        width: 230px;
+        text-align: center;
+        margin: 0.5rem 0 0 0;
     }
 
-    .imagemdireitotrabalhista img {
-        width: 150px;
-        height: 270px;
-    }
-
-    .h6 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 0px 10px;
-        font-weight: 400;
-    }
-
-    .p3 {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        margin: 0px 1px 0px 10px;
-    }
-
-    .direitotrabalhista a {
-        display: flex;
-        margin-top: 5px;
-        text-decoration: none;
-        color: #343434;
-        font-weight: 700;
-    }
-
-    .depoimentos-area {
-        background-color: #343434;
-        height: 650px;
-        
-    }
-
-    .h7 {
-        display: flex;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        margin: 0px 0px 50px 0px;
-        font-weight: 400;
-        color: white;
-        justify-content: center;
-        transform: translate(0, 1.5rem);
-    }
-
-    #boxes {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-    }
-
-    .box1 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .clientefoto {
-        width: 150px;
-        height: 120px;
-        
-    }
-
-    .clientefoto img {
-        width: 150px;
-        height: 130px;
-    }
-
-    .box2 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-    }
-
-    .box3 {
-        background-color: #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-
-    }
-
-    .box4 {
-        background-color:  #9A9B9B;
-        width: 150px;
-        height: 250px;
-        overflow: scroll;
-        
-    } 
-
-    .box1 a, .box2 a, .box3 a, .box4 a {
+    .direitotrabalhista {
         text-decoration: none;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
         font-size: 14px;
-        color:  #000000;
+        color: #343434;
     }
 
-    .avaliacao {
-        transform: translate(5px, 0px);
+    .direitotrabalhista img {
+        width: 230px;
+        height: 280px;
     }
 
-    .data {
+    #deps {
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: #fdfdfd;
+        margin: 10px 0px 10px 0px;
+        text-align: center;
+    }
+
+    .depoimentosarea {
+        height: auto;
+        padding-bottom: 2rem;
+        background-color: #343434;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .depoimentos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
+    }
+
+    .dep1 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
         color: white;
-        margin: 10px 0px 0px 5px;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    #data {
         font-size: 10px;
     }
 
-    #valores {
-        margin-top: 80px;
+    #data, #area, #av-direito-civil, #av-direito-penal, #av-direito-trabalhista, #av-direito-tributario {
+        margin-left: 5px;
+    }
+
+    .dep1 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep2 {
         display: flex;
-        align-items: center;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
         flex-direction: column;
-    }
-
-    .box5 {
-        width: 300px;
-        height: auto;
-    }
-
-    .box6 {
-        width: 300px;
-        height: 200px;
-    }
-
-    .box6 img {
-        width: 300px;
-        height: 201px;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    .box7 {
-        background-color: #130c07fb; 
-        width: 300px;
-        height: 350px;
-        overflow: scroll;
-    }
-
-    .h8 {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-
-    }
-
-
-    .p-valores {
-        text-align: center;
-        position: relative;
-        top: 10px;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        color: white;
-        font-weight: 300;
-    }
-
-    .p4 {
-        position: relative;
-        top: 30px;
-        text-align: center;
-    }
-
-    .p4 a {
-        text-decoration: none;
-        color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-    }
-
-    .box8 {
-        display: flex;
-        width: 100vw;
-        margin-top: 30px;
+        width: 150px;
+        height: 300px;
         background-color: #787878;
-        height: 35rem;
-        padding-top: 20px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .dep2 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep3 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
         flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .dep3 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .dep4 {
+        display: flex;
+        gap: 3px;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        width: 150px;
+        height: 300px;
+        background-color: #787878;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .dep4 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .box-valores {
+        display: flex;
+        justify-self: center;
+        width: 680px;
+        height: 345px;
+        background-color: #343434;
+    }
+
+    #valores-h1 {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(170, 170, 170);
+        font-weight: 300;
+    }
+
+    #valores-p {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    .box2 {
+        background-color: #343434;
+    }
+
+    .box2 img {
+        width: 330px;
+        height: 345px;
+    }
+
+    .box3 {
+        text-align: center;
+    }
+
+    #saibamais-box3 a {
+        color: #fff;
+        transform: translate(0, 1.5rem);
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+
+    .h1-jornal {
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        font-size: 20px;
+        background-color: #343434;
+    }
+
+    .jornal {
+        height: auto;
+        background-color: #343434;
+        padding-top: 1rem;
+        padding-bottom: 2rem; 
     }
 
     #mini-jornal {
         display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 35px;
     }
 
-    .box9 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box10 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box11 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box12 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box13 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .box14 {
-        width: 130px;
-        height: 220px;
-        background-color:  #343434;
-        overflow: scroll;
-    }
-
-    .imagemjornal {
-        width: 130px;
-        height: 120px;
-    }
-
-    .imagemjornal img {
-        width: 130px;
-        height: 120px;
-    }
-
-    .h9 {
-        color: white;
+    .noticias a {
+        display: flex;
+        text-decoration: none;
+        gap: 3px;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    .box9 a, .box10 a, .box11 a, .box12 a, .box13 a, .box14 a {
-        text-decoration: none;  
         color: white;
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        flex-direction: column;
+        width: 150px;
+        height: 330px;
+        background-color: #787878;
+        overflow: scroll;
+    }
+
+    .noticias img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .data-noticias {
         font-size: 10px;
-        
+        margin-left: 5px;
     }
 
-    .titulonoticia, .datajornal, .descnoticia {
-        transform: translate(3px, 0);
+    .h1-noticias {
+        font-size: 14px;
+        margin-left: 5px;
     }
 
+    .desc-noticias {
+        font-size: 12px;
+        margin-left: 5px;
+    }
 
     .box15 {
         width: 100vw;
@@ -1784,5 +1960,14 @@
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
         font-size: 10px;
         text-align: center;
+    }
+
+    .dev {
+        background-color:#9A9B9B;
+    }
+
+    .dev a {
+        text-decoration: none;
+        color: white;
     }
 }
