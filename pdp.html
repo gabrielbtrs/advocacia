@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pdp.css">
+    <title>Advocacia King</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.9985 2L12.9979 3.278L17.9985 4.94591L21.631 3.73509L22.2634 5.63246L19.2319 6.643L22.3272 15.1549C21.2353 16.2921 19.6996 17 17.9985 17C16.2975 17 14.7618 16.2921 13.6699 15.1549L16.7639 6.643L12.9979 5.387V19H16.9985V21H6.99854V19H10.9979V5.387L7.23192 6.643L10.3272 15.1549C9.23528 16.2921 7.69957 17 5.99854 17C4.2975 17 2.76179 16.2921 1.66992 15.1549L4.76392 6.643L1.73363 5.63246L2.36608 3.73509L5.99854 4.94591L10.9979 3.278L10.9985 2H12.9985ZM17.9985 9.10267L16.5809 13H19.4159L17.9985 9.10267ZM5.99854 9.10267L4.58092 13H7.41592L5.99854 9.10267Z"></path></svg></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="contato.html">Depoimentos</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="areas.html">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="img-header">
+            <img src="imgs/pexels-zachary-caraway-646894910-17630959.jpg" alt="foto header">
+        </div>
+        <section id="pdp">
+            <ol>
+                <li class="titulo">Coleta de Informações</li>
+                  <ol type="a" class="lista-letras">
+                    <li>Coletamos informações pessoais fornecidas diretamente, como nome, endereço de e-mail, telefone e outros dados preenchidos em formulários.</li>
+                    <li>Informações financeiras são coletadas para faturamento ou pagamentos.</li>
+                    <li>Também coletamos dados automaticamente, como endereço IP, tipo de navegador e comportamento no site.</li>
+                  </ol>
+                  <li class="titulo">Uso das Informações </li>
+                  <ol type="a" class="lista-letras">
+                    <li>As informações coletadas são usadas para prestar serviços, responder a consultas e realizar análises jurídicas.</li>
+                    <li>Também utilizamos os dados para personalizar sua experiência no site e melhorar nossos serviços.</li>
+                  </ol>
+                <li class="titulo">Compartilhamento de Dados </li>
+                  <ol type="a" class="lista-letras">
+                    <li>Seus dados não são vendidos ou compartilhados com terceiros, exceto quando exigido por lei ou necessário para prestar serviços contratados.</li>
+                  </ol>
+                <li class="titulo">Segurança</li>
+                  <ol type="a" class="lista-letras">
+                    <li>Adotamos medidas para proteger suas informações contra acesso não autorizado, uso indevido ou divulgação.</li>
+                  </ol>
+                <li class="titulo">Direitos do Usuário</li>
+                  <ol type="a" class="lista-letras">
+                    <li>Você tem o direito de acessar, corrigir ou excluir suas informações pessoais armazenadas por nós.</li>
+                  </ol>
+                <li class="titulo">Alterações na Política de Privacidade</li>
+                  <ol type="a" class="lista-letras">
+                    <li>Podemos atualizar esta política periodicamente. Recomendamos revisitar este documento regularmente para se manter informado.</li>
+                  </ol>
+                <li class="titulo">Contato </li>
+                  <ol type="a" class="lista-letras">
+                    <li>Para dúvidas ou solicitações sobre sua privacidade, entre em contato conosco através do e-mail ou telefone fornecido em nosso site.</li>
+                  </ol>
+              </ol>
+        </section>
+                  
+            <div class="box17">
+
+                <div class="box15">
+                    <div class="box16">
+                            <ul>
+                                <li><a href="areas.html">Áreas</a></li>
+                                <span><a href="index.html"><li>Home</li></a></span>
+                                <li><a href="depoimentos.html">Depoimentos</a></li>
+                                <span><li><a href="#">Aviso Legal</a></li></span>
+                            </ul>
+                    </div>
+                    <div class="box17">
+        
+                        <form action="/" method="post">
+        
+                            <div class="camposlogin">
+                                <label for=".nomedeusuario">Nome Completo:</label>
+                                <input type="text" name="username" class="nomedeusuario" required minlength="10">
+        
+                                <label for=".email">Seu Email:</label>
+                                <input type="email" name="email" class="email" required >
+        
+                                <label for=".problema">Qual equipe Deseja?</label>
+                                <select name="equipes" id="equipes" required>
+                                    <option value="" disabled selected>Selecione uma Opção</option>
+                                    <option value="Direito Civil">Direito Civil</option>
+                                    <option value="Direito Penal">Direito Penal</option>
+                                    <option value="Direito Trabalhista">Direito Trabalhista</option>
+                                    <option value="Direito Empresarial">Direito Empresarial</option>
+                                    <option value="Direito Tributário">Direito Tributário</option>
+                                    <option value="Direito Internacional">Direito Internacional</option>
+                                    <option value="Direito Administrativo">Direito Administrativo</option>
+                                </select>
+                            </div>
+        
+                            <div class="enviar-reset">
+                                <input type="submit" id="submit">
+                                <input type="reset" id="reset" value="Limpar">
+                            </div>
+        
+                        </form>
+                    </div>
+                </div>
+                <div class="credits-license">
+                    <p class="license">&copy; 2025 Agência de Advocacia King. Todos os direitos reservados.</p>
+                    <p class="license2">Este site e seu conteúdo são protegidos pelas leis de direitos autorais. É proibida a reprodução total ou parcial sem autorização prévia.</p>
+                    <p class="dev">Desenvolvido Por <a href="https://github.com/gabrielbtrs">Gabriel Torres</a></p>
+                    
+                </div>
+    </footer>
+    <script src="mobile.js"></script>
+</body>
+</html>
